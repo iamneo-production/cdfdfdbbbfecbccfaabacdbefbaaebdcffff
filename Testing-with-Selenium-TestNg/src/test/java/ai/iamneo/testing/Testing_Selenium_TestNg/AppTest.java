@@ -27,19 +27,22 @@ public class AppTest {
 	@Test
 	public void testCase_1() throws InterruptedException {
 		driver.manage().window().maximize();
-		driver.get("https://flipkart.com");
+		Thread.sleep(3000);
+		driver.get("https://amazon.com");
 		List<WebElement> allLink = driver.findElements(By.tagName("a"));
 		System.out.println("Number of links on a page : "+allLink.size());
-		
+		Thread.sleep(3000);
 			
 	}
 	@Test
 	public void testCase_2() throws InterruptedException {
+		Thread.sleep(3000);
 		List<WebElement> allLink = driver.findElements(By.tagName("a"));
 		for(WebElement link:allLink){
 			System.out.println("Link Text :"+link.getText());
 			System.out.println("Link Url :"+link.getAttribute("href"));
 		}
+		Thread.sleep(3000);
 	}
 
 	@AfterTest
