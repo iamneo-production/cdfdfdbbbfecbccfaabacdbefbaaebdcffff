@@ -12,8 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class AppTest {
 
 	ChromeOptions chromeOptions = new ChromeOptions();
@@ -28,13 +27,7 @@ public class AppTest {
 	@Test
 	public void testCase_1() throws InterruptedException {
 		driver.manage().window().maximize();
-		driver.get("https://flipkart.com");
-
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-
-            // Find all the links on the page
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("a")));
-
+		driver.get("https://amazon.com");
 		List<WebElement> allLink = driver.findElements(By.tagName("a"));
 		System.out.println("Number of links on a page : "+allLink.size());
 		Thread.sleep(3000);
