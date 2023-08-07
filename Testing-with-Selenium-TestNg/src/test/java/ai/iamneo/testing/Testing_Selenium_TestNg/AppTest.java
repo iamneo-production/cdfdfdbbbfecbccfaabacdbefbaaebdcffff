@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-
+import java.util.concurrent.TimeUnit;
 public class AppTest {
 
 	ChromeOptions chromeOptions = new ChromeOptions();
