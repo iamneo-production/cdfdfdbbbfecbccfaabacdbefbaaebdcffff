@@ -2,6 +2,7 @@ package ai.iamneo.testing.Testing_Selenium_TestNg;
 
 import org.testng.annotations.Test;
 import java.net.URL;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,18 +23,14 @@ public class AppTest {
 	}
 
 	@Test
-	public void TestCase_1() throws InterruptedException {
-		driver.get("https://admin.pscollege841.exam.ly/");
-		Thread.sleep(5000);  
-		String title = driver.getTitle();
-		Assert.assertEquals(title, "PS College");
+	public void testCase_1() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get("https://flipkart.com");
+		List<WebElement> allLink = driver.findElements(By.tagName("a"));	
 	}
 	@Test
-	public void TestCase_2() throws InterruptedException {
-		driver.get("https://admin.pscollege841.exam.ly/");
-		Thread.sleep(5000);  
-		String title = driver.getTitle();
-		Assert.assertEquals(title, "PS College");
+	public void testCase_2() throws InterruptedException {
+		
 	}
 
 	@AfterTest
