@@ -27,7 +27,7 @@ public class AppTest {
 	@Test
 	public void testCase_1() throws InterruptedException {
 		driver.manage().window().maximize();
-		driver.get("https://amazon.com");
+		driver.get("https://amazon.com/");
 		List<WebElement> allLink = driver.findElements(By.tagName("a"));
 		System.out.println("Number of links on a page : "+allLink.size());
 		Thread.sleep(3000);
